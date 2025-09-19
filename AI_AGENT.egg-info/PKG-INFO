@@ -10,5 +10,6 @@ Requires-Dist: fastapi
 Requires-Dist: pydantic
 Requires-Dist: streamlit
 Requires-Dist: langgraph
+Requires-Dist: setuptools
 Dynamic: author
 Dynamic: requires-dist

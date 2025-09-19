@@ -6,3 +6,4 @@ fastapi
 pydantic
 streamlit
 langgraph
+setuptools
