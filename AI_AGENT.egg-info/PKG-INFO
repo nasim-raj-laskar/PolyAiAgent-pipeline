@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: AI-AGENT
+Version: 0.0.1
+Author: Nasim
+Requires-Dist: langchain-groq
+Requires-Dist: langchain-community
+Requires-Dist: python-dotenv
+Requires-Dist: uvicorn
+Requires-Dist: fastapi
+Requires-Dist: pydantic
+Requires-Dist: streamlit
+Requires-Dist: langgraph
+Dynamic: author
+Dynamic: requires-dist
