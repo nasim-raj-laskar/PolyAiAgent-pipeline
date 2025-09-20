@@ -1,0 +1,12 @@
+[ 2025-09-20 11:49:02,764 ] 41 __main__ - INFO - Sending request to backend
+[ 2025-09-20 11:49:03,602 ] 49 __main__ - ERROR - Error in response from backend: 500
+[ 2025-09-20 11:51:36,691 ] 41 __main__ - INFO - Sending request to backend
+[ 2025-09-20 11:51:37,612 ] 49 __main__ - ERROR - Error in response from backend: 500
+[ 2025-09-20 11:51:38,642 ] 41 __main__ - INFO - Sending request to backend
+[ 2025-09-20 11:51:39,289 ] 49 __main__ - ERROR - Error in response from backend: 500
+[ 2025-09-20 11:51:42,821 ] 41 __main__ - INFO - Sending request to backend
+[ 2025-09-20 11:51:47,909 ] 45 __main__ - INFO - Received response from backend
+[ 2025-09-20 11:51:57,799 ] 41 __main__ - INFO - Sending request to backend
+[ 2025-09-20 11:52:07,979 ] 45 __main__ - INFO - Received response from backend
+[ 2025-09-20 11:55:16,837 ] 41 __main__ - INFO - Sending request to backend
+[ 2025-09-20 11:55:20,925 ] 45 __main__ - INFO - Received response from backend

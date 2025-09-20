@@ -1,0 +1,36 @@
+[ 2025-09-20 12:05:25,543 ] 21 app.backend.api - INFO - Received request: llama-3.3-70b-versatile
+[ 2025-09-20 12:05:25,543 ] 27 app.backend.api - INFO - Calling AI agent with model: llama-3.3-70b-versatile
+[ 2025-09-20 12:05:26,929 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:05:26,947 ] 34 app.backend.api - INFO - Successfully got Response from AI: llama-3.3-70b-versatile
+[ 2025-09-20 12:06:01,978 ] 21 app.backend.api - INFO - Received request: llama-3.3-70b-versatile
+[ 2025-09-20 12:06:01,978 ] 27 app.backend.api - INFO - Calling AI agent with model: llama-3.3-70b-versatile
+[ 2025-09-20 12:06:02,729 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:06:06,919 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:06:13,284 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:06:13,285 ] 34 app.backend.api - INFO - Successfully got Response from AI: llama-3.3-70b-versatile
+[ 2025-09-20 12:06:38,978 ] 21 app.backend.api - INFO - Received request: llama-3.3-70b-versatile
+[ 2025-09-20 12:06:38,978 ] 27 app.backend.api - INFO - Calling AI agent with model: llama-3.3-70b-versatile
+[ 2025-09-20 12:06:39,887 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:06:43,497 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:06:47,514 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:06:47,515 ] 34 app.backend.api - INFO - Successfully got Response from AI: llama-3.3-70b-versatile
+[ 2025-09-20 12:07:13,366 ] 21 app.backend.api - INFO - Received request: llama-3.3-70b-versatile
+[ 2025-09-20 12:07:13,366 ] 27 app.backend.api - INFO - Calling AI agent with model: llama-3.3-70b-versatile
+[ 2025-09-20 12:07:14,138 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:07:18,115 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:07:18,118 ] 34 app.backend.api - INFO - Successfully got Response from AI: llama-3.3-70b-versatile
+[ 2025-09-20 12:08:26,184 ] 21 app.backend.api - INFO - Received request: llama-3.3-70b-versatile
+[ 2025-09-20 12:08:26,184 ] 27 app.backend.api - INFO - Calling AI agent with model: llama-3.3-70b-versatile
+[ 2025-09-20 12:08:26,987 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:08:32,123 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:08:32,124 ] 34 app.backend.api - INFO - Successfully got Response from AI: llama-3.3-70b-versatile
+[ 2025-09-20 12:08:47,932 ] 21 app.backend.api - INFO - Received request: llama-3.3-70b-versatile
+[ 2025-09-20 12:08:47,932 ] 27 app.backend.api - INFO - Calling AI agent with model: llama-3.3-70b-versatile
+[ 2025-09-20 12:08:48,687 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:08:52,112 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:08:52,116 ] 34 app.backend.api - INFO - Successfully got Response from AI: llama-3.3-70b-versatile
+[ 2025-09-20 12:09:12,976 ] 21 app.backend.api - INFO - Received request: llama-3.3-70b-versatile
+[ 2025-09-20 12:09:12,976 ] 27 app.backend.api - INFO - Calling AI agent with model: llama-3.3-70b-versatile
+[ 2025-09-20 12:09:14,202 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:09:20,519 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 12:09:20,521 ] 34 app.backend.api - INFO - Successfully got Response from AI: llama-3.3-70b-versatile

@@ -16,3 +16,4 @@ app/config/settings.py
 app/core/__init__.py
 app/core/ai_agent.py
 app/frontend/__init__.py
+app/frontend/ui.py

@@ -1,0 +1,198 @@
+[ 2025-09-20 11:49:02,779 ] 21 app.backend.api - INFO - Received request: llama3-70b-8192
+[ 2025-09-20 11:49:02,779 ] 27 app.backend.api - INFO - Calling AI agent with model: llama3-70b-8192
+[ 2025-09-20 11:49:03,595 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[ 2025-09-20 11:49:03,596 ] 38 app.backend.api - ERROR - Error in chat endpoint: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+[ 2025-09-20 11:49:03,601 ] 40 app.backend.api - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\nasim\Code\MultiAiAgent\app\backend\api.py", line 28, in chat_endpoint
+    response=get_response_from_ai_agents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nasim\Code\MultiAiAgent\app\core\ai_agent.py", line 35, in get_response_from_ai_agents
+    response=agent.invoke(state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3026, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2647, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 162, in tick
+    run_with_retry(
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 394, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 627, in call_model
+    response = cast(AIMessage, static_model.invoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3245, in invoke
+    input_ = context.run(step.invoke, input_, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5710, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 395, in invoke
+    self.generate_prompt(
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1023, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 840, in generate
+    self._generate_with_cache(
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1089, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_groq\chat_models.py", line 533, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\groq\resources\chat\completions.py", line 448, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+During task with name 'agent' and id 'df2db068-e42e-de8a-4db2-8691ace601ed'
+
+[ 2025-09-20 11:51:36,701 ] 21 app.backend.api - INFO - Received request: llama3-70b-8192
+[ 2025-09-20 11:51:36,701 ] 27 app.backend.api - INFO - Calling AI agent with model: llama3-70b-8192
+[ 2025-09-20 11:51:37,591 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[ 2025-09-20 11:51:37,601 ] 38 app.backend.api - ERROR - Error in chat endpoint: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+[ 2025-09-20 11:51:37,608 ] 40 app.backend.api - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\nasim\Code\MultiAiAgent\app\backend\api.py", line 28, in chat_endpoint
+    response=get_response_from_ai_agents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nasim\Code\MultiAiAgent\app\core\ai_agent.py", line 35, in get_response_from_ai_agents
+    response=agent.invoke(state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3026, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2647, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 162, in tick
+    run_with_retry(
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 394, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 627, in call_model
+    response = cast(AIMessage, static_model.invoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3245, in invoke
+    input_ = context.run(step.invoke, input_, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5710, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 395, in invoke
+    self.generate_prompt(
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1023, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 840, in generate
+    self._generate_with_cache(
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1089, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_groq\chat_models.py", line 533, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\groq\resources\chat\completions.py", line 448, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+During task with name 'agent' and id '2fdc3ce1-f624-5685-6b76-a56fc389b619'
+
+[ 2025-09-20 11:51:38,649 ] 21 app.backend.api - INFO - Received request: llama3-70b-8192
+[ 2025-09-20 11:51:38,650 ] 27 app.backend.api - INFO - Calling AI agent with model: llama3-70b-8192
+[ 2025-09-20 11:51:39,279 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+[ 2025-09-20 11:51:39,279 ] 38 app.backend.api - ERROR - Error in chat endpoint: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+[ 2025-09-20 11:51:39,289 ] 40 app.backend.api - ERROR - Full traceback: Traceback (most recent call last):
+  File "C:\Users\nasim\Code\MultiAiAgent\app\backend\api.py", line 28, in chat_endpoint
+    response=get_response_from_ai_agents(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nasim\Code\MultiAiAgent\app\core\ai_agent.py", line 35, in get_response_from_ai_agents
+    response=agent.invoke(state)
+             ^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 3026, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\main.py", line 2647, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\_runner.py", line 162, in tick
+    run_with_retry(
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\pregel\_retry.py", line 42, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 657, in invoke
+    input = context.run(step.invoke, input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\_internal\_runnable.py", line 394, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langgraph\prebuilt\chat_agent_executor.py", line 627, in call_model
+    response = cast(AIMessage, static_model.invoke(model_input, config))  # type: ignore[union-attr]
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 3245, in invoke
+    input_ = context.run(step.invoke, input_, config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\runnables\base.py", line 5710, in invoke
+    return self.bound.invoke(
+           ^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 395, in invoke
+    self.generate_prompt(
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1023, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 840, in generate
+    self._generate_with_cache(
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_core\language_models\chat_models.py", line 1089, in _generate_with_cache
+    result = self._generate(
+             ^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\langchain_groq\chat_models.py", line 533, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\groq\resources\chat\completions.py", line 448, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\nasim\Code\MultiAiAgent\.venv\Lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.BadRequestError: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+During task with name 'agent' and id '09066746-baa7-8110-b19a-41b74904c1c8'
+
+[ 2025-09-20 11:51:42,821 ] 21 app.backend.api - INFO - Received request: llama-3.3-70b-versatile
+[ 2025-09-20 11:51:42,821 ] 27 app.backend.api - INFO - Calling AI agent with model: llama-3.3-70b-versatile
+[ 2025-09-20 11:51:43,951 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 11:51:47,909 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 11:51:47,909 ] 34 app.backend.api - INFO - Successfully got Response from AI: llama-3.3-70b-versatile
+[ 2025-09-20 11:51:57,799 ] 21 app.backend.api - INFO - Received request: openai/gpt-oss-120b
+[ 2025-09-20 11:51:57,799 ] 27 app.backend.api - INFO - Calling AI agent with model: openai/gpt-oss-120b
+[ 2025-09-20 11:51:58,847 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 11:52:07,969 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 11:52:07,979 ] 34 app.backend.api - INFO - Successfully got Response from AI: openai/gpt-oss-120b
+[ 2025-09-20 11:55:16,841 ] 21 app.backend.api - INFO - Received request: llama-3.3-70b-versatile
+[ 2025-09-20 11:55:16,841 ] 27 app.backend.api - INFO - Calling AI agent with model: llama-3.3-70b-versatile
+[ 2025-09-20 11:55:17,663 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 11:55:20,908 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+[ 2025-09-20 11:55:20,924 ] 34 app.backend.api - INFO - Successfully got Response from AI: llama-3.3-70b-versatile

@@ -1,0 +1,2 @@
+[ 2025-09-20 11:15:56,765 ] 21 app.backend.api - INFO - Received request: llama3-70b-8192
+[ 2025-09-20 11:15:57,348 ] 37 app.backend.api - ERROR - Error in chat endpoint: create_react_agent() got unexpected keyword arguments: {'system_prompt': 'You are a Medical Ai Agent Specializing in Cancer'}
