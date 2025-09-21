@@ -1,3 +1,0 @@
-[ 2025-09-20 11:45:59,986 ] 21 app.backend.api - INFO - Received request: llama3-70b-8192
-[ 2025-09-20 11:46:01,068 ] 1025 httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
-[ 2025-09-20 11:46:01,070 ] 37 app.backend.api - ERROR - Error in chat endpoint: Error code: 400 - {'error': {'message': 'The model `llama3-70b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}

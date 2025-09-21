@@ -1,2 +1,0 @@
-[ 2025-09-20 11:20:45,062 ] 40 __main__ - INFO - Sending request to backend
-[ 2025-09-20 11:20:45,599 ] 48 __main__ - ERROR - Error in response from backend: 500
