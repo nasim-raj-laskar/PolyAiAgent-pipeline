@@ -1,1 +1,4 @@
 .venv/
+.env
+logs/
+AI_AGENT.egg-info/
