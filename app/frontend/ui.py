@@ -186,10 +186,10 @@ if ask_button:
                     logger.info("Received response from backend")
                     
                     # Success animation
-                    st.success("✅ Response generated successfully!")
+                    st.success(" Response generated successfully!")
                     
                     # Full width response
-                    st.markdown("### 🤖 Agent Response:")
+                    st.markdown("### Agent Response:")
                     st.markdown(f"""
                     <div style="
                         background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
