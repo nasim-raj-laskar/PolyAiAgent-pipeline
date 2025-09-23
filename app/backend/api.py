@@ -21,7 +21,7 @@ def chat_endpoint(request:RequestState):
     logger.info(f"Received request: {request.model_name}")
     
     if request.model_name not in settings.ALLOWED_MODEL_NAMES:
-        logger.warning(f"Invalid model name")    
+        logger.warning("Invalid model name")    
         raise HTTPException(status_code=400, detail="Invalid model name")
     try:  
         logger.info(f"Calling AI agent with model: {request.model_name}")

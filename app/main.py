@@ -26,7 +26,7 @@ def run_backend():
         subprocess.run(["uvicorn", "app.backend.api:app", "--host", "127.0.0.1", "--port", port], check=True)
     except Exception as e:
         logger.error(f"Error running backend: {e}")
-        raise CustomException(f"Error running backend:", e)
+        raise CustomException("Error running backend:", e)
     
 def run_frontend():
     try:
