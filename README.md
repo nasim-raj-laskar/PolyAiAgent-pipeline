@@ -4,6 +4,8 @@ Production-grade multi-agent LLM orchestration platform with enterprise CI/CD pi
 
 ## Infrastructure Architecture
 
+![Simple Architecture](img/simple-architecture.png)
+
 - **Compute**: AWS ECS Fargate serverless containers
 - **Registry**: AWS ECR private container registry
 - **CI/CD**: Jenkins with Docker-in-Docker (DinD) capability
@@ -55,4 +57,29 @@ docker build -t multiaiagent .
 docker run -p 8000:8000 -p 8501:8501 multiaiagent
 ```
 
+## API Specification
 
+```http
+POST /chat
+Content-Type: application/json
+
+{
+  "model_name": "llama-3.3-70b-versatile",
+  "system_prompt": "You are a helpful assistant",
+  "messages": ["Hello"],
+  "allow_search": false
+}
+```
+
+## Environment Configuration
+
+```bash
+GROQ_API_KEY=<groq_api_key>
+TAVILY_API_KEY=<tavily_api_key>
+AWS_REGION=us-east-1
+ECR_REPO=multiaiagent
+```
+
+## Complete Architecture
+
+![Complete Architecture](img/Complete-achitecture.png)
