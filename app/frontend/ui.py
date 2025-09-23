@@ -143,6 +143,14 @@ with st.sidebar:
         st.info("🦙 Llama 3.3 70B - Versatile and powerful")
     elif selected_model == "openai/gpt-oss-120b":
         st.info("🧠 GPT OSS 120B - Large scale reasoning")
+    elif selected_model == "openai/gpt-oss-20b":
+        st.info("🧠 GPT OSS 20B - Efficient reasoning")
+    elif selected_model == "whisper-large-v3":
+        st.info("🎤 Whisper Large V3 - Advanced speech recognition")
+    elif selected_model == "meta-llama/llama-guard-4-12b":
+        st.info("🛡️ Llama Guard 4 12B - Safety and moderation")
+    elif selected_model == "whisper-large-v3-turbo":
+        st.info("⚡ Whisper Large V3 Turbo - Fast speech recognition")
 
 # Main content
 col1, col2 = st.columns([2, 1])
