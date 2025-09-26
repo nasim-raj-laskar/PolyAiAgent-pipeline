@@ -4,7 +4,7 @@ Production-grade multi-agent LLM orchestration platform with enterprise CI/CD pi
 
 ## Infrastructure Architecture
 
-![Simple Architecture](img/simple-architecture.png)
+![Simplee Architecture](img/simple-architecture.png)
 
 - **Compute**: AWS ECS Fargate serverless containers
 - **Registry**: AWS ECR private container registry
